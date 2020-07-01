@@ -1,0 +1,13 @@
+@mixin serif-big-1 {
+  font-family: $font-family-serif;
+  @include fluid-type(576px, 1800px, 20px, 40px);
+}
+@mixin serif {
+  font-family: $font-family-serif;
+}
+.serif-big-1 {
+  @include serif-big-1;
+}
+.serif {
+  @include serif;
+}

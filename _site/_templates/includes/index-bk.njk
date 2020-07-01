@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+title: "Index"
+---
+
+<div class="wrapper simple">
+	<ul class="loop list-unstyled">
+    {% for item in people.artistsList %}
+    <li>
+      <div class="list-item answer">
+				<a class="item-link" href="http://{{item.website|safe}}" data-website={{item.website|safe}} target="_blank">
+					<h2 class="item-title">{{item.title|safe}}</h2>
+					<div class="item-content" data-image="{{item.image}}"><img src="{{item.image}}" alt=""></div>
+				</a>
+        {% include "includes/why-label-left.njk" %}
+      </div>
+
+      <div class="list-item question">
+				<a class="item-link" href="http://{{item.website|safe}}" data-website={{item.website|safe}} target="_blank">
+					<h2 class="item-title">{{item.title|safe}}</h2>
+					<div class="item-content item-content-text">
+						<h3>{{item.question}}</h2>
+					</div>
+				</a>
+        {% include "includes/why-label-right.njk" %}
+      </div>
+    </li>
+    {% endfor %}
+	</ul>
+  <a class="item-website" href="#" target="_blank">www.laiaarqueros.com</a>
+</div>
+
+{# Shadow #}
+<div class="shadow"></div>
+{# White layout #}
+<div class="ly-hide-up fixed-center">
+</div>
+{# Artists #}
+<section id="artists" class="fixed-center">
+	{% include "includes/close.njk" %}
+	{% include "includes/artists.njk" %}
+</section>
+{# Newsletter #}
+<div id="newsletter" class="fixed-center">
+  {% include "includes/newsletter.njk" %}
+</div>
+{# Statement #}
+<section id="statement" class="fixed-center">
+	{% include "includes/close.njk" %}
+  {% include "includes/statement.njk" %}
+</section>
+{# Magazine #}
+<section id="mag" class="fixed-center">
+	{% include "includes/close.njk" %}
+  {% include "includes/mag.njk" %}
+</section>

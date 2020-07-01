@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="lead pb-2">
+    {{ magText | markdown | safe }}
+  </div>
+  <a href="{{magLink}}"  class="mag-link" target="_blank">
+    <figure class="item-shadow mag-image mx-auto">
+      <img src="{{magImage}}" alt="">
+    </figure>
+  </a>
+</div>

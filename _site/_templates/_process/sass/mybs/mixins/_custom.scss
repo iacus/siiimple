@@ -1,0 +1,232 @@
+@mixin dim-items($perc: .2) {
+  &:hover > * {
+     opacity: $perc;
+  }
+
+  & > * {
+     display: block;
+     transition: opacity 0.2s ease-out 0.02s;
+     color: white;
+
+     &:hover {
+        opacity: 1 !important;
+     }
+  }
+}
+
+@mixin dim($perc: .2) {
+  transition: opacity .2s ease-out 0.02s;
+
+  &:hover {
+     opacity: $perc;
+     text-decoration: none;
+  }
+}
+
+.dim {
+  @include dim;
+}
+.dim-items {
+  @include dim-items;
+}
+
+
+
+@function map-get-or-key($map, $key) {
+	@if map-has-key($map, $key) or map-has-key($map, -$key) {
+		@if $key != 'auto' and type-of($key) == 'number' and $key < 0 {
+			@return 0 - map-get($map, -$key);
+		} @else {
+			@return map-get($map, $key);
+		}
+	} @else if type-of($key) == 'string' {
+		@return unquote($key);
+	} @else {
+		@return $key;
+	}
+}
+
+@function bsize($key) {
+	@return map-get-or-key($spacers, $key);
+}
+
+@mixin m($space) {
+	margin: bsize($space);
+}
+
+@mixin mt($space) {
+	margin-top: bsize($space);
+}
+
+@mixin mb($space) {
+	margin-bottom: bsize($space);
+}
+
+@mixin ml($space) {
+	margin-left: bsize($space);
+}
+
+@mixin mr($space) {
+	margin-right: bsize($space);
+}
+
+@mixin p($space) {
+	padding: bsize($space);
+}
+
+@mixin pt($space) {
+	padding-top: bsize($space);
+}
+
+@mixin pb($space) {
+	padding-bottom: bsize($space);
+}
+
+@mixin pl($space) {
+	padding-left: bsize($space);
+}
+
+@mixin pr($space) {
+	padding-right: bsize($space);
+}
+
+@mixin mx($space) {
+	@include ml($space);
+	@include mr($space);
+}
+
+@mixin my($space) {
+	@include mt($space);
+	@include mb($space);
+}
+
+@mixin px($space) {
+	@include pl($space);
+	@include pr($space);
+}
+
+@mixin py($space) {
+	@include pt($space);
+	@include pb($space);
+}
+
+@mixin t($space) {
+	top: bsize($space);
+}
+
+@mixin r($space) {
+	right: bsize($space);
+}
+
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+$min_width: 576px;
+$max_width: 1800px;
+$min_font: 16px;
+$max_font: 24px;
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin fluid-padding($min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      padding: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        padding: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        padding: $max-padding;
+      }
+    }
+  }
+}
+
+@mixin fluid($property,$min-vw, $max-vw, $min-padding, $max-padding) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-padding);
+  $u4: unit($max-padding);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      #{$property}: $min-padding;
+      @media screen and (min-width: $min-vw) {
+        #{$property}: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        #{$property}: $max-padding;
+      }
+    }
+  }
+}
+
+
+
+
+@mixin isFlex($align: center, $justify: center, $direction: row, $wrap: wrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin bgImage($url, $repeat: no-repeat, $position: center, $size: initial) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+// Text antialiasing
+// --------------------------------------------------------------------------
+@mixin antialiasing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin no-antialiasing {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+@mixin item-shadow {
+  -webkit-box-shadow: 5px 5px 24px -5px rgba(0,0,0,0.31);
+  -moz-box-shadow: 5px 5px 24px -5px rgba(0,0,0,0.31);
+  box-shadow: 5px 5px 24px -5px rgba(0,0,0,0.31);
+}
+
+.item-shadow {
+  @include item-shadow;
+}

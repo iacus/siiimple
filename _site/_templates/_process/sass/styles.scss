@@ -1,4 +1,23 @@
 @import "~normalize.css";
+// Framework
+@import 'mybs/functions';
+@import 'mybs/mixins';
+@import "mybs/variables";
+@import "mybs/reboot";
+// My variables
 @import "variables";
-@import "components";
+// Framework
+// @import 'mybs/forms';
+@import 'mybs/navbar';
+// @import 'mybs/nav';
+@import 'mybs/type';
+@import 'mybs/grid';
+@import 'mybs/utilities';
+
+// My styles
+@import "type";
+@import "animations";
+@import "newsletter";
+@import "cursor";
 @import "base";
+// @import url("~@fancyapps/fancybox/dist/jquery.fancybox.css");

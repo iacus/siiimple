@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="wrapper dual">
+
+	<ul class="loop list-unstyled">
+
+	</ul>
+  <a class="item-website" href="#" target="_blank">www.website.com</a>
+	<div class="clear">
+
+	</div>
+	<div class="cursor-fallback">
+
+	</div>
+</div>
+
+{# Shadow #}
+<div class="shadow"></div>
+{# Cursor #}
+{% include "includes/cursor.njk" %}
+{# White layout #}
+<div class="ly-hide-up fixed-center">
+</div>
+{# Artists #}
+<section id="artists" class="fixed-center">
+	{% include "includes/close.njk" %}
+</section>
+{# Newsletter #}
+<div id="newsletter" class="fixed-center">
+  {% include "includes/newsletter.njk" %}
+</div>
+{# Statement #}
+<section id="statement" class="fixed-center">
+	{% include "includes/close.njk" %}
+  {# {% include "includes/statement.njk" %} #}
+</section>
+{# Magazine #}
+<section id="mag" class="fixed-center">
+	{% include "includes/close.njk" %}
+  {# {% include "includes/mag.njk" %} #}
+</section>

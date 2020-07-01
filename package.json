@@ -12,7 +12,7 @@
     "prod:webpack": "webpack --mode production",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy"
   },
-  "author": "Iago&MAT",
+  "author": "Iago",
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.6.0",

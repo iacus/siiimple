@@ -1,0 +1,94 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "_site/images"
+public_folder: "/images"
+site_url: https://whyafterwhy.netlify.com
+display_url: https://whyafterwhy.netlify.com
+logo_url: "/images/logo.svg"
+
+collections:
+  - label: Artists
+    name: artists
+    folder: _site/collections/artists
+    editor:
+      preview: false
+    create: true
+    summary: '{{title}} - {{question}}'
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    delete: true
+    fields:
+      - label: "Name"
+        name: "title"
+        widget: "string"
+        default: "Alejandra Smits"
+        pattern: ['.{5,}', "Must have at least 5 characters"]
+        comment: 'This is a multiline\ncomment'
+      - label: "Image answer"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Id Video"
+        name: "id_video"
+        widget: "string"
+        required: false
+      - label: "Question"
+        name: "question"
+        widget: "string"
+        default: "What’s freedom for you?"
+        pattern: ['.{5,}', "Must have at least 5 characters"]
+      - label: "Website Text"
+        name: "websiteText"
+        widget: "string"
+        default: "www.alejandrasmits.com"
+        required: false
+        pattern: ['.{5,}', "Must have at least 5 characters"]
+      - label: "Website URL"
+        name: "websiteUrl"
+        widget: "string"
+        default: "http://www.alejandrasmits.com"
+        required: false
+        pattern: ['.{5,}', "Must have at least 5 characters"]
+  - name: settings
+    label: Settings
+    files:
+    - name: collectionOrder
+      label: Artists Order
+      file: _site/collections/utils/collectionOrder.md
+      fields:
+        - label: Collection
+          name: collection
+          widget: list
+          fields:
+            - label: Collection Name
+              name: collectionName
+              widget: relation
+              collection: artists
+              searchFields: [title]
+              valueField: title
+  - name: "pages"
+    label: "Pages"
+    description: >
+      Pages.
+    delete: false
+    create: false
+    editor:
+      preview: false
+    files:
+      - label: "Sections"
+        name: "index"
+        file: "_site/index.md"
+        fields:
+          - {label: "Site Name", name: "siteName", widget: "string", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Site Description", name: "siteDescription", widget: "string", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "SEO Description", name: "seoText", widget: "string", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Artists Text", name: "artistsText", widget: "markdown", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Social Text", name: "socialText", widget: "markdown", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Credits Text", name: "creditsText", widget: "markdown", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Statement Text", name: "statementText", widget: "markdown", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Mag Text", name: "magText", widget: "markdown", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Mag Image", name: "magImage", widget: "image", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Mag Link", name: "magLink", widget: "string", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Instagram Link", name: "instagramLink", widget: "string", required: true, pattern: ['.{5,}', "Must have at least 5 characters"]}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/index.njk"}

@@ -1,25 +1,52 @@
-// TYPE
+@import url("//hello.myfonts.net/count/3aec6e");
+
+@font-face {font-family: 'NeueHaasUnicaW1G-Light';src: url('../fonts/3AEC6E_0_0.eot');src: url('../fonts/3AEC6E_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3AEC6E_0_0.woff2') format('woff2'),url('../fonts/3AEC6E_0_0.woff') format('woff'),url('../fonts/3AEC6E_0_0.ttf') format('truetype');}
 
 @font-face {
-  font-family: 'Clearface';
-  src: url('../fonts/clearface.woff') format('woff');
+    font-family: 'wremenalight';
+    src: url('../fonts/wremenalight-webfont.woff2') format('woff2'),
+         url('../fonts/wremenalight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-$font-base: 'Clearface', serif;
-$font-helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-$size-huge: 5rem;
-$size-extra: 4rem;
-$size-headline-big: 3.5rem;
-$size-headline: 2.5rem;
-$size-text-big: 2rem;
-$size-text: 1.5rem;
-$size-tiny: 0.75rem;
+$black:                       #000;
+$cream:                       #F7F3ED ;
+$primary:                     $black;
+$secondary:                   $cream ;
 
-// COLORS
+$font-family-sans-serif:      "NeueHaasUnicaW1G-Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-serif:           "wremenalight",SSFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-base:            $font-family-sans-serif ;
 
-$black:     #000;
-$gray:      #2a2727;
-$light-gray: #d8d8d8;
-$white:     #fff;
-$cream:     #cec3c3;
+$font-weight-base:            $font-weight-light;
+$line-height-base:            1.1;
+
+$grid-gutter-width:           60px;
+
+$border-width:                2px;
+
+$zindex-sections:                        1040;
+$zindex-newsletter:                      1050;
+$zindex-nav:                             1060;
+$zindex-close:                           1070;
+
+$spacer: 1rem ;
+$spacers: () ;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+$enable-responsive-font-sizes:    true ;
+$enable-shadows:                  true ;
