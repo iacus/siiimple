@@ -1,0 +1,38 @@
+{
+  "name": "eleventy-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple boilerplate for website development",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel clean dev:*",
+    "clean": "rimraf dist",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "dev:webpack": "webpack --mode development --watch",
+    "build": "run-s clean prod:*",
+    "prod:webpack": "webpack --mode production",
+    "prod:eleventy": "ELEVENTY_ENV=production eleventy"
+  },
+  "author": "Iago&MAT",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}

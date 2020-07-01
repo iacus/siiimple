@@ -1,0 +1,25 @@
+// TYPE
+
+@font-face {
+  font-family: 'Clearface';
+  src: url('../fonts/clearface.woff') format('woff');
+}
+
+$font-base: 'Clearface', serif;
+$font-helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$size-huge: 5rem;
+$size-extra: 4rem;
+$size-headline-big: 3.5rem;
+$size-headline: 2.5rem;
+$size-text-big: 2rem;
+$size-text: 1.5rem;
+$size-tiny: 0.75rem;
+
+// COLORS
+
+$black:     #000;
+$gray:      #2a2727;
+$light-gray: #d8d8d8;
+$white:     #fff;
+$cream:     #cec3c3;
