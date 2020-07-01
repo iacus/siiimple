@@ -1,5 +1,50 @@
 ---
 layout: layouts/base.njk
 ---
+<div class="fluid-container">
+  <!-- Logo -->
+  <div class="row center" data-color="color-set-01">
+    <div class="container">
+      {% include "includes/logo.njk" %}
+    </div>
+  </div>
+  <!-- Introduction -->
+  <div class="row center" data-color="color-set-04">
+    <div class="container">
+      <h2>{{menuText|safe}}</h2>
+    </div>
+  </div>
+  <!-- Menus -->
+  <div class="menus-wrapper">
+    {% for item in collections.menu %}
+    <div class="row" data-color="color-set-03">
+        <!-- Button trigger -->
+        <button class="menu-trigger" type="button" name="{{item.data.title}}">
+          <div class="container">
+            <div class="row">
+              <h4 class="menu-title">{{item.data.title}}</h4>
+              <span>+</span>
+            </div>
+          </div>
+        </button>
+        <!-- Menu inner -->
+        <div class="container menu-inner">
+          {% for subitems in item.data.items %}
+            <div class="menu-item">
+              <span class="menu-item-title">{{subitems.title|safe}} ⟶ {{subitems.price}}</span>
+              <span class="d-block">{{subitems.text|safe}}</span>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- Social -->
+  <div class="row center" data-color="color-set-04">
+    <div class="container">
+      <a href="{{instagramLink}}">Instagram</a> /
+      <a href="{{facebookLink}}">Facebook</a>
+    </div>
+  </div>
 
-<h1>menu</h1>
+</div>

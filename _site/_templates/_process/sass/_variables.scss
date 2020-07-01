@@ -1,28 +1,24 @@
-@import url("//hello.myfonts.net/count/3aec6e");
-
-@font-face {font-family: 'NeueHaasUnicaW1G-Light';src: url('../fonts/3AEC6E_0_0.eot');src: url('../fonts/3AEC6E_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3AEC6E_0_0.woff2') format('woff2'),url('../fonts/3AEC6E_0_0.woff') format('woff'),url('../fonts/3AEC6E_0_0.ttf') format('truetype');}
-
-@font-face {
-    font-family: 'wremenalight';
-    src: url('../fonts/wremenalight-webfont.woff2') format('woff2'),
-         url('../fonts/wremenalight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 $black:                       #000;
-$cream:                       #F7F3ED ;
-$primary:                     $black;
-$secondary:                   $cream ;
+$brown:                       #3A2518;
+$light-brown:                 #E5B5A3;
+$orange:                      #A3523D;
+$blue:                        #90C7BB;
+$cream:                       lighten( $brown, 20% );
 
-$font-family-sans-serif:      "NeueHaasUnicaW1G-Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+$primary:                     $brown;
+$secondary:                   $light-brown;
+
+
+$font-family-sans-serif:      "Cera", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
-$font-family-serif:           "wremenalight",SSFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
-$font-family-base:            $font-family-sans-serif ;
+$font-family-serif:           "Chap",SSFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-base:            $font-family-serif ;
 
 $font-weight-base:            $font-weight-light;
 $line-height-base:            1.1;
+
+$headings-margin-bottom:      0;
 
 $grid-gutter-width:           60px;
 
@@ -42,11 +38,64 @@ $spacers: map-merge(
     1: ($spacer * .25),
     2: ($spacer * .5),
     3: $spacer,
-    4: ($spacer * 1.5),
+    4: ($spacer * 2),
     5: ($spacer * 3)
   ),
   $spacers
 );
 
+$container-max-widths: (
+  sm: 590px,
+  md: 500px,
+  lg: 600px,
+  xl: 700px
+);
+
+
 $enable-responsive-font-sizes:    true ;
 $enable-shadows:                  true ;
+
+
+$my-colors: () !default;
+
+$my-colors-set: map-merge(
+  (
+    "color-set-01": (
+      "color": $brown,
+      "bg": $white,
+      "hover": $orange,
+      "muted": $gray-600
+    ),
+    "color-set-02": (
+      "color": $light-brown,
+      "bg": $orange,
+      "hover": $brown,
+      "muted": $gray-600
+    ),
+    "color-set-03": (
+      "color": $brown,
+      "bg": $light-brown,
+      "hover": $brown,
+      "muted": $gray-600
+    ),
+    "color-set-04": (
+      "color": $brown,
+      "bg": $blue,
+      "hover": $orange,
+      "muted": $gray-600
+    ),
+    "color-set-05": (
+      "color": $pink,
+      "bg": $brown,
+      "hover": $black,
+      "muted": $gray-600
+    ),
+    "color-set-06": (
+      "color": $brown,
+      "bg": $pink,
+      "hover": $black,
+      "muted": $gray-600
+    )
+  ),
+  $my-colors
+);

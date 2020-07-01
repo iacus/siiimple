@@ -1,7 +1,7 @@
 module.exports = function (config) {
 
-   config.addCollection('posts', collection => {
-      return collection.getFilteredByGlob('_site/posts/*.md')
+   config.addCollection('menu', collection => {
+      return collection.getFilteredByGlob('_site/collections/menu/*.md')
    });
 
    config.addFilter('markdown', function(value) {

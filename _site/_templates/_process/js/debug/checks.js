@@ -5,7 +5,7 @@ import Utils from '../utils/utils.js'
 export default class Checks {
   constructor() {
     this.config = {
-      BREAKPOINTS: false
+      BREAKPOINTS: true
     }
     this.Utils = new Utils
 
@@ -29,7 +29,7 @@ export default class Checks {
       document.querySelector('body').classList.add('show-breakpoints');
 
       const getWidth = () => {
-        $('body').attr('data-width',window.innerWidth + "px");
+        document.querySelector('body').setAttribute('data-width', window.innerWidth+'px');
       }
 
       window.addEventListener('resize',getWidth)

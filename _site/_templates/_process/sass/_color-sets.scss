@@ -1,0 +1,25 @@
+@each $my-colors, $data in $my-colors-set {
+  [data-color='#{$my-colors}'] {
+    background-color: map-get($data, bg);
+    color: map-get($data, color);
+
+    a{
+      color: map-get($data, color);
+      // transition: color 200ms ease-in-out;
+
+      &.change-color:hover{
+        color: map-get($data, hover);
+      }
+    }
+
+    ::selection {
+       background: map-get($data, color);
+       color: map-get($data, bg);
+    }
+
+    ::-moz-selection {
+       background: map-get($data, color);
+       color: map-get($data, bg);
+    }
+  }
+}
