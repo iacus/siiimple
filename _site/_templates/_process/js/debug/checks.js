@@ -5,7 +5,7 @@ import Utils from '../utils/utils.js'
 export default class Checks {
   constructor() {
     this.config = {
-      BREAKPOINTS: true
+      BREAKPOINTS: false
     }
     this.Utils = new Utils
 

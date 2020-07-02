@@ -3,7 +3,7 @@
 export default class Debug {
   constructor () {
     this.config = {
-      DEBUG: true
+      DEBUG: false
     }
   }
   debugControl () {
