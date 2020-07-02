@@ -3,13 +3,13 @@ layout: layouts/base.njk
 ---
 <div class="fluid-container">
   <!-- Logo -->
-  <div class="row center" data-color="color-set-01">
+  <div class="d-flex center" data-color="color-set-01">
     <div class="container">
       {% include "includes/logo.njk" %}
     </div>
   </div>
   <!-- Introduction -->
-  <div class="row center" data-color="color-set-04">
+  <div class="d-flex center" data-color="color-set-04">
     <div class="container">
       <h2>{{menuText|safe}}</h2>
     </div>
@@ -17,22 +17,20 @@ layout: layouts/base.njk
   <!-- Menus -->
   <div class="menus-wrapper">
     {% for item in collections.menu %}
-    <div class="row" data-color="color-set-03">
+    <div class="" data-color="color-set-03">
         <!-- Button trigger -->
-        <button class="menu-trigger" type="button" name="{{item.data.title}}">
+        <div class="menu-trigger" data-color="color-set-02">
           <div class="container">
-            <div class="row">
-              <h4 class="menu-title">{{item.data.title}}</h4>
-              <span>+</span>
-            </div>
+              <h4 class="menu-title">{{item.data.title}} <span>+</span></h4>
           </div>
-        </button>
+        </div>
+
         <!-- Menu inner -->
         <div class="container menu-inner">
           {% for subitems in item.data.items %}
             <div class="menu-item">
               <span class="menu-item-title">{{subitems.title|safe}} ⟶ {{subitems.price}}</span>
-              <span class="d-block">{{subitems.text|safe}}</span>
+              <span class="menu-item-text d-block">{{subitems.text|safe}}</span>
             </div>
           {% endfor %}
         </div>
@@ -40,7 +38,7 @@ layout: layouts/base.njk
     {% endfor %}
   </div>
   <!-- Social -->
-  <div class="row center" data-color="color-set-04">
+  <div class="d-flex center" data-color="color-set-05">
     <div class="container">
       <a href="{{instagramLink}}">Instagram</a> /
       <a href="{{facebookLink}}">Facebook</a>

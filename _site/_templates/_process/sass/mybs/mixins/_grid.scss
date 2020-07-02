@@ -4,7 +4,7 @@
 
 @mixin make-container($gutter: $grid-gutter-width) {
   width: 100%;
-  padding: $gutter / 4;
+  padding: $gutter / 3.5;
   margin-right: auto;
   margin-left: auto;
 
@@ -12,7 +12,7 @@
     padding: $gutter / 3;
   }
   @include media-breakpoint-up (md) {
-    padding: $gutter / 2;
+    padding: $gutter / 2.5;
   }
 }
 

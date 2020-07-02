@@ -13,7 +13,7 @@
 
 html {
   box-sizing: border-box;
-  @include fluid-type(576px, 1800px, 16px, 25px);
+  @include fluid-type(576px, 1800px, 17px, 26px);
   height: auto;
 }
 
@@ -31,7 +31,7 @@ body {
    font-family: $font-family-base;
    color: $primary;
    background-color: $secondary;
-   line-height: .9;
+   line-height: $line-height-base;
 
    &.open {
       overflow: hidden;
@@ -70,7 +70,7 @@ h4,
 h5,
 h6 {
    font-weight: normal;
-   line-height: 1;
+   line-height: $headings-line-height;
 }
 
 h1 {

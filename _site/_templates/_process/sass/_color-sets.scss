@@ -3,9 +3,18 @@
     background-color: map-get($data, bg);
     color: map-get($data, color);
 
+    .menu-trigger {
+      border-bottom: .05rem solid map-get($data, bg);
+      transition: background-color 200ms ease-out;
+
+      &:hover{
+        background-color: map-get($data, hover);
+      }
+    }
+
     a{
       color: map-get($data, color);
-      // transition: color 200ms ease-in-out;
+      transition: color 200ms ease-in-out;
 
       &.change-color:hover{
         color: map-get($data, hover);

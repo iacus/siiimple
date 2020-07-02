@@ -1,33 +1,35 @@
 .logo svg{
-  width: 30%;
+  width: 45%;
 }
 
 .menu-item-title {
   font-family: $font-family-sans-serif;
   text-transform: uppercase;
 }
-
-.menu-trigger {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: $orange;
-  border: none;
+.menu-trigger span {
+  transition: transform 200ms ease-out;
 }
+.menu-trigger.open span {
+  transform: rotate(45deg);
+}
+.menu-trigger,
+.menu-trigger *{
+  cursor: pointer;
+}
+// .menus-wrapper > div:first-child .menu-trigger{
+//   border: none !important
+// }
 
 .menu-title {
   margin-bottom: 0;
+  width: 100%;
   text-transform: uppercase;
-  color: $light-brown;
+  display: flex;
+  justify-content: space-between;
 }
 
-.menu-group {
-  background-color: $cream;
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.menu-inner {
+  display: none;
 }
 
 .logo a{
