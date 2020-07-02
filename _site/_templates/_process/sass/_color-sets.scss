@@ -7,9 +7,17 @@
       border-bottom: .05rem solid map-get($data, bg);
       transition: background-color 200ms ease-out;
 
-      &:hover{
-        background-color: map-get($data, hover);
+      @include media-breakpoint-up (md) {
+        &:hover{
+          background-color: map-get($data, hover);
+        }
       }
+      @include media-breakpoint-down (sm) {
+        &.open {
+          background-color: map-get($data, hover);
+        }
+      }
+
     }
 
     a{

@@ -1,6 +1,8 @@
 ---
 collection:
-  - collectionName: Artist 001
-  - collectionName: Artist 002
-  - collectionName: Artist 003
+  - title: Desayunos
+  - title: Menus
+  - title: Ensaladas
+  - title: Platos
+  - title: Meriendas
 ---
