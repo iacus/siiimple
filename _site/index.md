@@ -1,8 +1,9 @@
 ---
-siteName: Tahona
-siteDescription: The largest inverview ever
-seoText: The largest inverview ever
-menuText: Toda nuestra carta <br>la puedes disfrutar en nuestro local, <br>o te la preparamos para llevar.
+siteName: Tahona- A Coruña
+siteDescription: O fogar do pan
+seoText: O fogar do pan
+instagramLink: https://www.instagram.com/panaderiatahona
+facebookLink: https://www.facebook.com/panaderiastahona
 links:
     - text: oom@oscarotero.com
       title: Contacta conmigo
@@ -25,6 +26,6 @@ navigation:
       title: Traballos
     - collection: conxeito
       title: Conxeito
-      
+
 layout: layouts/index.njk
 ---
