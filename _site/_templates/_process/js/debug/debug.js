@@ -17,6 +17,7 @@ export default class Debug {
     }
   }
   addCredits () {
+    console.log('\n\n Design by KinderGarten', 'http://somoskindergarten.com', '\n\n')
     console.log('\n\n Code by Iago Barreiro', 'https://iagobarreiro.com', '\n\n')
   }
   init () {

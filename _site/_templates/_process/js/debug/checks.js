@@ -16,11 +16,20 @@ export default class Checks {
     document.documentElement.classList.add('js');
   }
 
-  isMobile () {
-    if (this.Utils.isMobile()) {
-      console.log('is mobile');
-      document.documentElement.classList.add('is-mobile');
+  hasTouchScreen () {
+    const checkDevice = () => {
+      console.log('resize');
+      if (this.Utils.hasTouchScreen()) {
+        document.documentElement.classList.add('is-touch');
+        document.documentElement.classList.remove('no-touch');
+      } else {
+        document.documentElement.classList.add('no-touch');
+        document.documentElement.classList.remove('is-touch');
+      }
     }
+
+    window.addEventListener('resize',checkDevice)
+    checkDevice()
   }
 
   showBreakpoints () {
@@ -40,7 +49,7 @@ export default class Checks {
 
   init() {
     this.isJs()
-    this.isMobile()
+    this.hasTouchScreen()
     this.showBreakpoints()
   }
 }

@@ -7,26 +7,18 @@
       border-bottom: .05rem solid map-get($data, bg);
       transition: background-color 200ms ease-out;
 
-      @include media-breakpoint-up (md) {
-        &:hover{
+      .no-touch &:hover{
           background-color: map-get($data, hover);
         }
-      }
-      @include media-breakpoint-down (sm) {
-        &.open {
+      .is-touch &.open {
           background-color: map-get($data, hover);
         }
-      }
 
     }
 
     a{
       color: map-get($data, color);
       transition: color 200ms ease-in-out;
-
-      &.change-color:hover{
-        color: map-get($data, hover);
-      }
     }
 
     ::selection {
