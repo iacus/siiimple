@@ -8,7 +8,7 @@
     </div>
     <li class="shop-item" data-color="{{item.data-color|safe}}">
       <span class="shop-title">{{item.title|safe}}</span>
-      {# <span class="block-text">{{item.text|markdown|safe}}</span> #}
+      <span class="block-text">{{item.text|safe}}</span>
       {% if item.tel %}
         <a class="shop-tel" href="tel:{{item.tel|safe|nospaces}}" target="_blank">Tel. {{item.tel|safe}}</a>
       {% endif %}
