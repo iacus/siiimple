@@ -16,7 +16,8 @@ module.exports = {
    },
    plugins: [
       new CopyWebpackPlugin([
-         { from: './images', to: '../dist/images' }
+         { from: './images', to: '../dist/images' },
+         { from: './admin/config.yml', to: '../dist/admin/config.yml'}
       ]),
       new MiniCssExtractPlugin({
          filename: "css/style.css"
