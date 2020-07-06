@@ -3,6 +3,7 @@ $black:                       #000;
 $brown:                       #3A2518;
 $light-brown:                 #E5B5A3;
 $orange:                      #A3523D;
+$light-orange:                #B55132;
 $blue:                        #90C7BB;
 $cream:                       #E8D0C4;
 
@@ -93,10 +94,47 @@ $my-colors-set: map-merge(
     ),
     "color-set-06": (
       "color": $brown,
-      "bg": $pink,
-      "hover": $black,
+      "bg": $light-orange,
+      "hover": $cream,
       "muted": $gray-600
-    )
+    ),
   ),
   $my-colors
+);
+
+
+$my-type: () !default;
+
+$my-type-set: map-merge(
+  (
+    "type-set-01": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": .7rem,
+      "lh": .7rem,
+      "size-sm": 1rem,
+      "lh-sm": 1rem,
+      "size-md": 1rem,
+      "lh-md": 1rem,
+      "size-lg": 1rem,
+      "lh-lg": 1rem,
+      "size-xl": 1rem,
+      "lh-xl": 1rem,
+    ),
+    "type-set-02": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": .65rem,
+      "lh": .65rem,
+      "size-sm": .65rem,
+      "lh-sm": .65rem,
+      "size-md": .65rem,
+      "lh-md": .65rem,
+      "size-lg": .65rem,
+      "lh-lg": .65rem,
+      "size-xl": .65rem,
+      "lh-xl": .65rem,
+    )
+  ),
+  $my-type
 );

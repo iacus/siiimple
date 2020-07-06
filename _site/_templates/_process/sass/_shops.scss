@@ -1,0 +1,17 @@
+.shops {
+  &-wrapper {
+    justify-content: space-between;
+  }
+}
+
+.shop {
+  &-item {
+    text-align: center;
+  }
+
+  &-title,
+  &-tel {
+    display: block;
+    text-transform: uppercase;
+  }
+}

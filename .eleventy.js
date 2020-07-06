@@ -33,6 +33,10 @@ module.exports = function(config) {
     return markdown.render(value);
   });
 
+  config.addFilter('nospaces', function(value) {
+    return value.replace(/\s/g, '');
+  });
+
   return {
     dir: {
       input: "_site",
