@@ -1,7 +1,7 @@
 ---
 pageName: Inicio
 pageDescription: O fogar do pan
-seoDescription: O fogar do pan
+pageSeoDescription: O fogar do pan
 emailText: hola@tahona.gal
 emailLink: hola@tahona.gal
 shops:
@@ -22,20 +22,19 @@ shops:
 blocks:
   - title: O FOGAR <br>DO PAN
     image: images/1.jpg
-    data-color: color-set-01
-    text: aa
-  - text: I just love **bold text**.
-    title: aa
-  - title: Artesáns <br>dende 1948
-    text: aa
-    image: images/3.jpg
-    href: https://twitter.com/misteroom
-  - layout: layouts/index.njk
+    dataColor: color-set-05
+    dataType: type-set-03
+  - image: images/2.jpg
+    dataColor: color-set-03
+    dataType: type-set-01
     text: "Somos fogar dos costumes, \rdas festas do pobo.\r\rDe Rosalía e Yolanda.
       \rDo de sempre e do novo.\r\rDas comidas eternas, \rdas cousas ben feitas.
       \rDo pan da aldea de \rrúas estreitas.\r\rDa choiva, da Torre e \rda costa
       verdescente, \rdo mar picado nos ollos \rda nosa xente.\r\rSomos fogar do
       pan, \ro fomos onte, \re serémolo sempre."
-    title: No title
+  - title: Artesáns <br>dende 1948
+    dataColor: color-set-04
+    dataType: type-set-03
+    image: images/3.jpg
 layout: layouts/index.njk
 ---
