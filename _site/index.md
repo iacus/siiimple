@@ -27,11 +27,26 @@ blocks:
   - image: images/2.jpg
     dataColor: color-set-03
     dataType: type-set-01
-    text: "Somos fogar dos costumes, \rdas festas do pobo.\r\rDe Rosalía e Yolanda.
-      \rDo de sempre e do novo.\r\rDas comidas eternas, \rdas cousas ben feitas.
-      \rDo pan da aldea de \rrúas estreitas.\r\rDa choiva, da Torre e \rda costa
-      verdescente, \rdo mar picado nos ollos \rda nosa xente.\r\rSomos fogar do
-      pan, \ro fomos onte, \re serémolo sempre."
+    text: |-
+      Somos fogar dos costumes, \
+      das festas do pobo.
+
+      De Rosalía e Yolanda. \
+      Do de sempre e do novo.
+
+      Das comidas eternas, \
+      das cousas ben feitas. \
+      Do pan da aldea de \
+      rúas estreitas.
+
+      Da choiva, da Torre e \
+      da costa verdescente, \
+      do mar picado nos ollos \
+      da nosa xente.
+
+      Somos fogar do pan, \
+      o fomos onte, \
+      e serémolo sempre.
   - title: Artesáns <br>dende 1948
     dataColor: color-set-04
     dataType: type-set-03
