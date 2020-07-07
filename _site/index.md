@@ -23,10 +23,10 @@ blocks:
   - title: O FOGAR <br>DO PAN
     image: images/1.jpg
     dataColor: color-set-05
-    dataType: type-set-03
+    dataType: display-01
   - image: images/2.jpg
     dataColor: color-set-03
-    dataType: type-set-01
+    dataType: text-02
     text: |-
       Somos fogar dos costumes, \
       das festas do pobo.
@@ -49,7 +49,7 @@ blocks:
       e serémolo sempre.
   - title: Artesáns <br>dende 1948
     dataColor: color-set-04
-    dataType: type-set-03
+    dataType: display-01
     image: images/3.jpg
 layout: layouts/index.njk
 ---

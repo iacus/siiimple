@@ -11,18 +11,18 @@ module.exports = function(config) {
       })
 
     // Primero filtramos el array quitando los elementos que no están
-     const menu = collection.getFilteredByGlob('_site/collections/menu/*.md').filter((a) => {
+     const collectionSorted = collection.getFilteredByGlob('_site/collections/menu/*.md').filter((a) => {
        // Chequeamos que está dentro del array (mayor que 0)
        if (sortArray.indexOf(a.data.title) >= 0) {
          return 1
        }
      })
      // Despues lo ordenamos según el array de orden
-     menu.sort((a,b) => {
+     collectionSorted.sort((a,b) => {
        return sortArray.indexOf(a.data.title) - sortArray.indexOf(b.data.title);
      })
      // Devolvemos el array
-     return menu
+     return collectionSorted
 
   });
 

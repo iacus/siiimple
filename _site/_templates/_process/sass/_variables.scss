@@ -107,7 +107,7 @@ $my-type: () !default;
 
 $my-type-set: map-merge(
   (
-    "type-set-01": (
+    "text-02": (
       "family": $font-family-serif,
       "weight": $font-weight-base,
       "size": .9rem,
@@ -121,7 +121,7 @@ $my-type-set: map-merge(
       "size-xl": 1rem,
       "lh-xl": 1rem,
     ),
-    "type-set-02": (
+    "text-01": (
       "family": $font-family-serif,
       "weight": $font-weight-base,
       "size": .65rem,
@@ -135,7 +135,7 @@ $my-type-set: map-merge(
       "size-xl": .65rem,
       "lh-xl": .65rem,
     ),
-    "type-set-03": (
+    "display-01": (
       "family": $font-family-serif,
       "weight": $font-weight-base,
       "size": 3rem,

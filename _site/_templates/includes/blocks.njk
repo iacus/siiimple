@@ -1,6 +1,6 @@
-<div class="blocks-wrapper d-flex" data-type="type-set-02">
+<div class="blocks-wrapper d-flex">
   {% for item in blocks %}
-    <div class="block-item" data-color="{{item.dataColor|safe}}" data-type="{{item.dataType|safe}}">
+    <div class="block-item {{item.dataType|safe}}" data-color="{{item.dataColor|safe}}">
       <!-- Block image -->
       <div class="block-half block-image">
         {% if item.image %}
