@@ -18,7 +18,8 @@
     "@babel/polyfill": "^7.6.0",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
-    "nunjucks-markdown-filter": "^0.1.0"
+    "nunjucks-markdown-filter": "^0.1.0",
+    "swiper": "^6.0.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",

@@ -2,28 +2,28 @@
 layout: layouts/base.njk
 ---
 <div class="fluid-container">
-  <!-- Logo -->
-  <div class="d-flex center" data-color="color-set-01">
-    <div class="container">
-      {% include "includes/logo.njk" %}
-    </div>
+  <!-- Header -->
+  <div class="header-section container-fluid container-small" data-color="color-set-01">
+    {% include "includes/header.njk" %}
   </div>
   <!-- Tiendas -->
-  <div class="shops-wrapper" data-color="color-set-06">
-    <div class="container-fluid">
+  <div class="shops-section hide-sm text-01" data-color="color-set-06">
+    <div class="container-fluid container-small">
       {% include "includes/shops.njk" %}
     </div>
   </div>
   <!-- Bloques -->
-  <div class="shops-wrapper">
+  <div class="blocks-section halfheight">
       {% include "includes/blocks.njk" %}
   </div>
-  <!-- Footer -->
-  <div class="d-flex center" data-color="color-set-05">
-    <div class="container">
-      {% include "includes/footer.njk" %}
+  <!-- Tiendas mobile -->
+  <div class="shops-section show-sm text-02" data-color="color-set-04">
+    <div class="container-fluid">
+      {% include "includes/shops.njk" %}
     </div>
   </div>
-
-
+  <!-- Footer -->
+  <div class="footer-section container-fluid container-small" data-color="color-set-09">
+      {% include "includes/footer.njk" %}
+  </div>
 </div>

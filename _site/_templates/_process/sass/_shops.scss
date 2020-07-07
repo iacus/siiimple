@@ -1,17 +1,79 @@
 .shops {
   &-wrapper {
     justify-content: space-between;
+    flex-direction: row;
+
+    // TEST: Ajuste horizonal de los margentes
+    @include media-breakpoint-up (md) {
+      margin-left: -$grid-gutter-width / 14;
+      margin-right: -$grid-gutter-width / 14;
+    }
+    @include media-breakpoint-up (lg) {
+      margin-left: -$grid-gutter-width / 6.25;
+      margin-right: -$grid-gutter-width / 6.25;
+    }
+    @include media-breakpoint-up (xl) {
+      margin-left: -$grid-gutter-width / 4.25;
+      margin-right: -$grid-gutter-width / 4.25;
+    }
   }
 }
 
 .shop {
   &-item {
     text-align: center;
+    margin-top: 0.65rem;
+    margin-bottom: 0.75rem;
+    margin-right: 0.25rem;
+    flex: 1 1 0px;
+
   }
+
+  // &-item:first-child {
+  //   display: flex;
+  //   margin-right: auto;
+  // }
+  //
+  // &-item:last-child {
+  //   display: flex;
+  //   margin-left: auto;
+  // }
 
   &-title,
   &-tel {
     display: block;
+    text-align: center;
     text-transform: uppercase;
+
+    & br{
+      display: none;
+      @include media-breakpoint-up(md){
+        display: block;
+      }
+    }
+  }
+}
+
+
+.show-sm .shops {
+  &-wrapper {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.show-sm.shops-section .container-fluid {
+  padding: $grid-gutter-width / 3.25;
+}
+
+.show-sm .shop {
+  &-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &-title,
+  &-tel {
+
   }
 }

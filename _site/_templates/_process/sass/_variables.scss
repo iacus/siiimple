@@ -23,7 +23,7 @@ $headings-line-height:        1;
 
 $headings-margin-bottom:      0;
 
-$grid-gutter-width:          120px;
+$grid-gutter-width:          5rem;
 
 $border-width:                2px;
 
@@ -98,6 +98,24 @@ $my-colors-set: map-merge(
       "hover": $cream,
       "muted": $gray-600
     ),
+    "color-set-07": (
+      "color": $cream,
+      "bg": $brown,
+      "hover": $black,
+      "muted": $gray-600
+    ),
+    "color-set-08": (
+      "color": $orange,
+      "bg": $blue,
+      "hover": $orange,
+      "muted": $gray-600
+    ),
+    "color-set-09": (
+      "color": $white,
+      "bg": $brown,
+      "hover": $black,
+      "muted": $gray-600
+    ),
   ),
   $my-colors
 );
@@ -128,12 +146,12 @@ $my-type-set: map-merge(
       "lh": .65rem,
       "size-sm": .65rem,
       "lh-sm": .65rem,
-      "size-md": .65rem,
-      "lh-md": .65rem,
-      "size-lg": .65rem,
+      "size-md": .50rem,
+      "lh-md": .55rem,
+      "size-lg": .55rem,
       "lh-lg": .65rem,
       "size-xl": .65rem,
-      "lh-xl": .65rem,
+      "lh-xl": .70rem,
     ),
     "display-01": (
       "family": $font-family-serif,

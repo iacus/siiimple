@@ -22,8 +22,9 @@ shops:
 blocks:
   - title: O FOGAR <br>DO PAN
     image: images/1.jpg
-    dataColor: color-set-05
+    dataColor: color-set-07
     dataType: display-01
+    classText: absolute-sm-down
   - image: images/2.jpg
     dataColor: color-set-03
     dataType: text-02
@@ -48,8 +49,9 @@ blocks:
       o fomos onte, \
       e serémolo sempre.
   - title: Artesáns <br>dende 1948
-    dataColor: color-set-04
+    dataColor: color-set-08
     dataType: display-01
+    classText: absolute-sm-down
     image: images/3.jpg
 layout: layouts/index.njk
 ---

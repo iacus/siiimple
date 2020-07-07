@@ -1,14 +1,15 @@
 <div class="blocks-wrapper d-flex">
+  <!-- Blocks loop -->
   {% for item in blocks %}
-    <div class="block-item {{item.dataType|safe}}" data-color="{{item.dataColor|safe}}">
+    <div class="block block-item {{item.dataType|safe}}" data-color="{{item.dataColor|safe}}">
       <!-- Block image -->
       <div class="block-half block-image">
         {% if item.image %}
-          <img class="block-title" src="{{item.image|safe}}" alt="">
+          <img class="block-title img-fit" src="{{item.image|safe}}" alt="">
         {% endif %}
       </div>
       <!-- Block text -->
-      <div class="block-half block-text">
+      <div class="block-half block-text {{item.classText|safe}}">
         {% if item.title %}
           <span class="block-title">{{item.title|safe}}</span>
         {% endif %}

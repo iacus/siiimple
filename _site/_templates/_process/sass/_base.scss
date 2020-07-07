@@ -157,7 +157,76 @@ body {
   padding: 0;
 }
 
+// utils
+
+
+
+.hide-sm {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.show-sm {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.img-fit{
+  object-fit: cover;
+  min-height: 100%;
+}
+
 .center{
   display: flex;
   text-align: center;
+}
+
+.col {
+  padding: 0
+}
+.col-3 {
+  padding: 0
+}
+.col-2 {
+  padding: 0
+}
+
+.valign-center {
+  display: flex;
+  align-items: center;
+}
+.halign-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container-small {
+  padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
+
+  @include media-breakpoint-up (sm) {
+    padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
+  }
+  @include media-breakpoint-up (md) {
+    padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
+  }
+}
+
+// Logos sizes
+.header-section .logo svg{
+  width: 70%;
+}
+
+.logo-footer svg{
+  width: 50%;
+
+  @include media-breakpoint-up (md) {
+    width: 40%;
+  }
+  @include media-breakpoint-up (lg) {
+    width: 30%;
+  }
 }

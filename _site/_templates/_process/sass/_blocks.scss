@@ -15,8 +15,9 @@
     }
   }
 
+  // En desktop los bloques hacen mosaico
   &-item:nth-child(even) {
-
+    flex-direction: column-reverse;
       @include media-breakpoint-up (md) {
         flex-direction: row-reverse;
       }
@@ -33,13 +34,37 @@
       width: 50%;
       flex-direction: row;
     }
+
+  }
+
+  &-image {
+    overflow: hidden;
+    height: 100%;
   }
 
   &-text {
     padding: 1.5rem;
-    
+
     @include media-breakpoint-up (md) {
 
+    }
+  }
+
+  .absolute-sm-down {
+    @include media-breakpoint-down(sm) {
+    height: 100%;
+    position: absolute;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Test version without swiper
+  .halfheight & {
+    height: 80vw;
+
+    @include media-breakpoint-up (md) {
+      height: 50vw;
     }
   }
 

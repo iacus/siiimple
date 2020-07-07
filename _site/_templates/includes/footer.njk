@@ -1,17 +1,12 @@
-{# <footer class="py-3">
-  <div class="container">
-    <div class="mb-3 d-flex justify-content-between flex-column flex-lg-row align-items-center">
-      <h5 class="mb-0"><a href="#"><strong>Modular</strong> Multiespazo</a></h5>
-      <ul class="nav my-3 my-lg-0">
-        <li class="nav-item"><a class="nav-link" data-scroll href="#sobre-nos">Sobre nós<span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a class="nav-link" data-scroll href="#tarifas">Tarifas</a></li>
-        <li class="nav-item"><a class="nav-link pr-0" data-scroll href="#contacto">Contacto</a></li>
-      </ul>
+  <div class="d-flex text-02">
+    <div class="col valign-center text-left">
+        <a href="mailto:{{settings.mail}}" target="_blank">{{settings.mail}}</a>
     </div>
-    <div class="d-flex justify-content-between flex-column flex-lg-row align-items-center">
-      <p class="mb-0 small text-muted">© 2020 Modular Multiespazo</p>
-      <p class="mb-0 small text-muted"><span class="mr-3">Deseño e código: <a target="_blank" href="https://iagobarreiro.com">Iago Barreiro</a></span><span>Fotografías: <a target="_blank" href="http://www.luisdiazdiaz.com/">Luis Díaz Díaz</a></span></p>
+    <div class="col logo-footer text-center">
+      {% include "includes/logo-footer.njk" %}
+    </div>
+    <div class="col halign-end">
+      <a target="_blank" href="{{settings.instagramLink}}">Instagram</a> /
+      <a target="_blank" href="{{settings.facebookLink}}">Facebook</a>
     </div>
   </div>
-</footer>
- #}
