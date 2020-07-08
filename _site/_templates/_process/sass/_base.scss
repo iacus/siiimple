@@ -180,7 +180,7 @@ body {
 }
 
 .container-small {
-  padding: $grid-gutter-width / 2.25 $grid-gutter-width / 3.25;
+  padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
 
   @include media-breakpoint-up (sm) {
     padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
@@ -221,8 +221,11 @@ body {
   &-wrapper {
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include media-breakpoint-up (sm) {
       flex-direction: row;
+      padding: 0
     }
   }
 
