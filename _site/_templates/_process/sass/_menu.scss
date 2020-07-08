@@ -1,6 +1,15 @@
-.logo svg{
-  // width: 45%;
-  transform: translateY(-0.15rem);
+
+
+.menu-wrapper{
+
+  .logo svg{
+    width: 10rem;
+  }
+
+  .container {
+      @include make-container (6.5rem)
+  }
+
 }
 
 .menu-item-title {
