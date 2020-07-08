@@ -4,7 +4,8 @@
         url('/fonts/Chap-Regular.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: auto;
+    unicode-range: U+000-5FF; /* Latin glyphs */
 }
 
 @font-face {
@@ -13,5 +14,6 @@
         url('/fonts/CeraPro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: auto;
+    unicode-range: U+000-5FF; /* Latin glyphs */
 }
