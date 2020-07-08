@@ -29,7 +29,7 @@ blocks:
     dataColor: color-set-03
     dataType: text-02
     classBlock: alternate
-    imageClass: lazyload-
+    imageClass: lazyload
     text: |-
       Somos fogar dos costumes, \
       das festas do pobo.
@@ -58,6 +58,6 @@ blocks:
     dataType: display-01
     classText: absolute-sm-down
     image: images/3.jpg
-    imageClass: lazyload-
+    imageClass: lazyload
 layout: layouts/index.njk
 ---
