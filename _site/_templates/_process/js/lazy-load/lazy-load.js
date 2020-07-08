@@ -51,7 +51,7 @@ export default class LazyLoad {
     console.log('lazy load init');
     setTimeout( () => {
       this.preloadContent()
-    }, 100);
+    }, 0);
 
   }
 }
