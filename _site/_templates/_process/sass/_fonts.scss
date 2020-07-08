@@ -1,19 +1,18 @@
-// @font-face {
-//     font-family: 'Chap';
-//     src: url('/fonts/Chap-Regular.woff2') format('woff2'),
-//         url('/fonts/Chap-Regular.woff') format('woff');
-//     font-weight: bold;
-//     font-style: normal;
-//     font-display: auto;
-//     unicode-range: U+000-5FF; /* Latin glyphs */
-// }
-//
-// @font-face {
-//     font-family: 'Cera';
-//     src: url('/fonts/CeraPro-Bold.woff2') format('woff2'),
-//         url('/fonts/CeraPro-Bold.woff') format('woff');
-//     font-weight: bold;
-//     font-style: normal;
-//     font-display: auto;
-//     unicode-range: U+000-5FF; /* Latin glyphs */
-// }
+@font-face {
+    font-family: 'Chap';
+    src: url('/fonts/Chap-Regular.woff2') format('woff2'),
+        url('/fonts/Chap-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Cera';
+    src: url('/fonts/CeraPro-Bold.woff2') format('woff2'),
+        url('/fonts/CeraPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF; /* Latin glyphs */
+}
