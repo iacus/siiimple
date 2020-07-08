@@ -1,9 +1,8 @@
-<div class="d-flex text-02">
-  <div class="col valign-center text-left">
+<div class="d-flex">
+  <div class="header-logo col">
       {% include "includes/logo.njk" %}
   </div>
-
-  <div class="col halign-end">
-    <a href="mailto:{{settings.mail}}" target="_blank">{{settings.mail}}</a>
+  <div class="header-contact col">
+    <a href="mailto:{{settings.mail}}" class="text-02" target="_blank">{{settings.mail}}</a>
   </div>
 </div>

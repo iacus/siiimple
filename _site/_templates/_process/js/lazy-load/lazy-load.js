@@ -1,69 +1,17 @@
 'use strict'
 
-import Plyr from 'plyr';
-import 'plyr/dist/plyr.css';
-
 export default class LazyLoad {
   constructor() {
     this.config = {
-
+      lazyClass: '.lazyload'
     }
 
   }
 
-  parseVideo(item){
-
-    let plyr = new Plyr(item.querySelector('.js-player'),
-      {
-            autoplay : true, //Parece que en Chrome es la solución
-            autopause: true,
-            muted: true,
-            loop: { active: true },
-            controls: ['play','fullscreen']
-      })
-
-      // Como tenemos autoplay, en el momento que comienza el video
-      // Se ejecutan los siguientes controles
-      plyr.once('play', event => {
-        plyr.muted = true
-        plyr.pause()
-        this.parseDefaultVideoControls (item,plyr)
-      });
-
-      item.classList.add('parsed')
-      item.player = plyr //Lo guardamos en el objeto player del padre
-
-  }
-
-  parseDefaultVideoControls (item,player) {
-    // Con esta función evitamos que los controles del video sean afectados
-    // por el link de la caja a la web de artista
-    let buttons = item.querySelectorAll("[data-plyr]");
-
-    buttons.forEach((item) => {
-      const handlerClick = (e) => {
-        e.preventDefault()
-      }
-
-      item.addEventListener('click',handlerClick)
-    })
-
-  }
-
-  preloadContent (current) {
-    let video = current.querySelector('.js-player-wrapper')
-    let image = current.querySelector('.item-content-image')
-
-    if (video != null) {
-      // Is video
-      if (!video.classList.contains('parsed')) {
-        this.parseVideo(video)
-      }
-    } else if (image != null) {
-      // Is image
-      let imgTarget = $(current).find('img').attr('data-src')
-      $(current).find('img').attr('src',imgTarget)
-    }
+  preloadContent () {
+    document.querySelectorAll(this.config.lazyClass).forEach(img => {
+      img.src = img.getAttribute('data-src')
+    });
   }
 
   lazyObserver () {
@@ -92,14 +40,15 @@ export default class LazyLoad {
       });
     }, config);
 
-    const imgs = document.querySelectorAll('.answer');
+    const imgs = document.querySelectorAll(this.config.lazyClass);
     imgs.forEach(img => {
       observer.observe(img);
+      console.log(img);
     });
   }
 
   init() {
     console.log('lazy load init');
-    this.lazyObserver()
+    this.preloadContent()
   }
 }

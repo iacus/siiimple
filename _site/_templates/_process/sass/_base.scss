@@ -159,21 +159,6 @@ body {
 
 // utils
 
-
-
-.hide-sm {
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
-}
-
-.show-sm {
-  display: block;
-  @include media-breakpoint-up(md) {
-    display: none;
-  }
-}
-
 .img-fit{
   object-fit: cover;
   min-height: 100%;
@@ -194,18 +179,8 @@ body {
   padding: 0
 }
 
-.valign-center {
-  display: flex;
-  align-items: center;
-}
-.halign-end {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 .container-small {
-  padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
+  padding: $grid-gutter-width / 2.25 $grid-gutter-width / 3.25;
 
   @include media-breakpoint-up (sm) {
     padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
@@ -215,18 +190,90 @@ body {
   }
 }
 
-// Logos sizes
-.header-section .logo svg{
-  width: 70%;
+
+//Header
+.header {
+  &-logo{
+    text-align: center;
+
+    @include media-breakpoint-up (sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-logo svg{
+    width: 8rem;
+  }
+
+  &-contact{
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
 }
 
-.logo-footer svg{
-  width: 50%;
+.footer {
 
-  @include media-breakpoint-up (md) {
-    width: 40%;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up (sm) {
+      flex-direction: row;
+    }
   }
-  @include media-breakpoint-up (lg) {
-    width: 30%;
+
+  &-logo{
+    text-align: center;
+
+    @include media-breakpoint-down (xs) {
+      order: 3;
+    }
+  }
+
+  &-logo svg{
+    width: 6rem;
+  }
+
+  &-contact{
+    text-align: center;
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      align-items: center;
+    }
+    @include media-breakpoint-down (xs) {
+      order: 2;
+    }
+  }
+
+  &-social {
+    text-align: center;
+    order: 1;
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+  }
+
+
+}
+
+//Footer
+
+.show-sm {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.hide-sm {
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }

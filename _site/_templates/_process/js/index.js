@@ -5,11 +5,13 @@
 import Debug from './debug/debug'
 import Checks from './debug/checks'
 import ShowSections from './show-sections/show-sections'
+import LazyLoad from './lazy-load/lazy-load'
 
 const initFun = () => {
   new Debug().init()
   new Checks().init()
   new ShowSections().init()
+  new LazyLoad().init()
 }
 
 

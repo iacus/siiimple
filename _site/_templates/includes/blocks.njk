@@ -1,25 +1,32 @@
 <div class="blocks-wrapper d-flex">
   <!-- Blocks loop -->
   {% for item in blocks %}
-    <div class="block block-item {{item.dataType|safe}}" data-color="{{item.dataColor|safe}}">
-      <!-- Block image -->
-      <div class="block-half block-image">
+      <div class="block block-item {{item.dataType|safe}} {{item.classBlock|safe}}" data-color="{{item.dataColor|safe}}">
+        <!-- Block image -->
         {% if item.image %}
-          <img class="block-title img-fit" src="{{item.image|safe}}" alt="">
+          <div class="block-half block-image">
+            {# Lazy image #}
+            {% if item.imageClass == 'lazyload' %}
+              <img class="block-title img-fit {{item.imageClass|safe}}" data-src="{{item.image|safe}}" alt="">
+            {% else %}
+              <img class="block-title img-fit {{item.imageClass|safe}}" src="{{item.image|safe}}" alt="">
+            {% endif %}
+          </div>
         {% endif %}
+        <!-- Block text -->
+        <div class="block-half block-text {{item.classText|safe}}">
+          {% if item.title %}
+            <span class="block-title">{{item.title|safe}}</span>
+          {% endif %}
+          {% if item.text %}
+            <span class="block-text">{{item.text|markdown|safe}}</span>
+          {% endif %}
+          {# hack: Bloque de tiendas introducido en el medio #}
+          {% if item.include %}
+            {% include "includes/shops.njk" %}
+          {% endif %}
+        </div>
       </div>
-      <!-- Block text -->
-      <div class="block-half block-text {{item.classText|safe}}">
-        {% if item.title %}
-          <span class="block-title">{{item.title|safe}}</span>
-        {% endif %}
-        {% if item.text %}
-          <span class="block-text">{{item.text|markdown|safe}}</span>
-        {% endif %}
-        {% if item.tel %}
-          <a class="block-tel" href="tel:{{item.tel|safe|nospaces}}" target="_blank">Tel. {{item.tel|safe}}</a>
-        {% endif %}
-      </div>
-    </div>
+
   {% endfor %}
 </div>

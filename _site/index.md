@@ -18,7 +18,7 @@ shops:
     tel: 981 903 727
   - title: RÚA GERMÁN TAIBO
     tel: 981 238 435
-  - title: FNAC<br>CORUÑA
+  - title: FNAC <br>CORUÑA
 blocks:
   - title: O FOGAR <br>DO PAN
     image: images/1.jpg
@@ -28,6 +28,8 @@ blocks:
   - image: images/2.jpg
     dataColor: color-set-03
     dataType: text-02
+    classBlock: alternate
+    imageClass: lazyload
     text: |-
       Somos fogar dos costumes, \
       das festas do pobo.
@@ -48,10 +50,14 @@ blocks:
       Somos fogar do pan, \
       o fomos onte, \
       e serémolo sempre.
+  - dataColor: color-set-04
+    classBlock: text-02 show-sm
+    include: true
   - title: Artesáns <br>dende 1948
     dataColor: color-set-08
     dataType: display-01
     classText: absolute-sm-down
     image: images/3.jpg
+    imageClass: lazyload
 layout: layouts/index.njk
 ---

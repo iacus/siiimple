@@ -16,7 +16,8 @@
   }
 
   // En desktop los bloques hacen mosaico
-  &-item:nth-child(even) {
+  &-item.alternate
+   {
     flex-direction: column-reverse;
       @include media-breakpoint-up (md) {
         flex-direction: row-reverse;
@@ -45,8 +46,8 @@
   &-text {
     padding: 1.5rem;
 
-    @include media-breakpoint-up (md) {
-
+    & p:last-child{
+      margin-bottom: 0;
     }
   }
 
@@ -59,13 +60,20 @@
     }
   }
 
-  // Test version without swiper
-  .halfheight & {
-    height: 80vw;
+}
 
-    @include media-breakpoint-up (md) {
-      height: 50vw;
-    }
+// Ajuste vertical de las alturas de los bloques
+.halfheight .block-image {
+  height: 80vw;
+
+  @include media-breakpoint-up (md) {
+    height: 50vw;
   }
+}
 
+.halfheight .block {
+
+  @include media-breakpoint-up (md) {
+    height: 50vw;
+  }
 }
