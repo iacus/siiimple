@@ -17,6 +17,7 @@ module.exports = {
    plugins: [
       new CopyWebpackPlugin([
          { from: './images', to: '../dist/images' },
+         { from: './_templates/_process/fonts', to: '../dist/fonts' },
          { from: './admin/config.yml', to: '../dist/admin/config.yml'}
       ]),
       new MiniCssExtractPlugin({
@@ -65,18 +66,18 @@ module.exports = {
                }
             }]
          },
-         {
-            test: /\.(woff|woff2|ttf|otf|eot)$/,
-            use: [
-               {
-                  loader: 'file-loader',
-                  options: {
-                     context: path.resolve(__dirname, '_site'),
-                     outputPath: 'fonts'
-                  }
-               }
-            ]
-         }
+         // {
+         //    test: /\.(woff|woff2|ttf|otf|eot)$/,
+         //    use: [
+         //       {
+         //          loader: 'file-loader',
+         //          options: {
+         //             context: path.resolve(__dirname, '_site'),
+         //             outputPath: 'fonts'
+         //          }
+         //       }
+         //    ]
+         // }
       ]
    }
 }
