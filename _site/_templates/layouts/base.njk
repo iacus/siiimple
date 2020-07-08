@@ -10,8 +10,8 @@
    {# Preload fonts: Solo las tipografías esenciales #}
    <link rel="preload" href="{{ '/fonts/Chap-Regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
    <link rel="preload" href="{{ '/fonts/Chap-Regular.woff' | url }}" as="font" type="font/woff2" crossorigin>
-   <link rel="preload" href="{{ '/fonts/CeraPro-Bold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
-   <link rel="preload" href="{{ '/fonts/CeraPro-Bold.woff' | url }}" as="font" type="font/woff2" crossorigin>
+   {# <link rel="preload" href="{{ '/fonts/CeraPro-Bold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="{{ '/fonts/CeraPro-Bold.woff' | url }}" as="font" type="font/woff2" crossorigin> #}
    {# End Preload fonts #}
    <link rel="stylesheet" href="/css/style.css">
    <meta name="description" itemprop="description" content="{{ seoText | safe }}">
@@ -44,8 +44,8 @@
    {# {% include "includes/footer.njk" %} #}
 
 
-   <script defer src="/js/bundle.js"></script>
-   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+   <script  src="/js/bundle.js"></script>
+   <script  src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
        window.netlifyIdentity.on("init", user => {
