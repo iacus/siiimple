@@ -63,9 +63,13 @@
 }
 
 // Ajuste vertical de las alturas de los bloques
-.halfheight .block-image {
-  height: 90vw;
+.halfheight .block-image,
+.halfheight .block-text {
+  height: 130vw;
 
+  @include media-breakpoint-up (sm) {
+    height: 90vw;
+  }
   @include media-breakpoint-up (md) {
     height: 50vw;
   }

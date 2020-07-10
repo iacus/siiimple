@@ -47,6 +47,15 @@ $spacers: map-merge(
   $spacers
 );
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 2000px
+);
+
 $container-max-widths: (
   sm: 590px,
   md: 500px,
@@ -138,6 +147,22 @@ $my-type-set: map-merge(
       "lh-lg": 1rem,
       "size-xl": 1.1rem,
       "lh-xl": 1.1rem,
+    ),
+    "text-03": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": 1.2rem,
+      "lh": 1.25rem,
+      "size-sm": 1.2rem,
+      "lh-sm": 1.25rem,
+      "size-md": .8rem,
+      "lh-md": .85rem,
+      "size-lg": 1rem,
+      "lh-lg": 1rem,
+      "size-xl": 1.1rem,
+      "lh-xl": 1.1rem,
+      "size-xxl": 1.3rem,
+      "lh-xxl": 1.4rem,
     ),
     "text-01": (
       "family": $font-family-serif,

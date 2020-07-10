@@ -27,7 +27,7 @@ blocks:
     classText: absolute-sm-down
   - image: images/2.jpg
     dataColor: color-set-03
-    dataType: text-02
+    dataType: text-03
     classBlock: alternate
     imageClass: lazyload
     text: |-
@@ -51,7 +51,7 @@ blocks:
       o fomos onte, \
       e serémolo sempre.
   - dataColor: color-set-04
-    classBlock: text-02 show-sm
+    classBlock: text-03 show-sm
     include: true
   - title: Artesáns <br>dende 1948
     dataColor: color-set-08

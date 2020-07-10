@@ -23,5 +23,9 @@
       font-size: map-get($data, size-xl);
       line-height: map-get($data, lh-xl);
     }
+    @include media-breakpoint-up (xxl) {
+      font-size: map-get($data, size-xxl);
+      line-height: map-get($data, lh-xxl);
+    }
   }
 }

@@ -60,6 +60,9 @@ body {
     @include media-breakpoint-up (xl) {
       content: "xl " attr(data-width);
     }
+    @include media-breakpoint-up (xxl) {
+      content: "xxl " attr(data-width);
+    }
   }
 }
 
@@ -187,6 +190,9 @@ body {
   }
   @include media-breakpoint-up (md) {
     padding: $grid-gutter-width / 5.25 $grid-gutter-width / 3.25;
+  }
+  @include media-breakpoint-up (xxl) {
+    padding: $grid-gutter-width / 5.25 $grid-gutter-width / 2;
   }
 }
 
