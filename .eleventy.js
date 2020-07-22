@@ -26,6 +26,32 @@ module.exports = function(config) {
 
   });
 
+    let sortArrayFull = []
+
+  config.addCollection('menuFull', collection => {
+      // Guardamos en el array sortArray los elementos los items buscados
+      collection.getFilteredByGlob('_site/collections/utils/collectionOrderFull.md').map((a) => {
+           a.data.collection.map((a) => {
+             sortArrayFull.push(a.title)
+           })
+      })
+
+    // Primero filtramos el array quitando los elementos que no están
+     const collectionSorted = collection.getFilteredByGlob('_site/collections/menu/*.md').filter((a) => {
+       // Chequeamos que está dentro del array (mayor que 0)
+       if (sortArrayFull.indexOf(a.data.title) >= 0) {
+         return 1
+       }
+     })
+     // Despues lo ordenamos según el array de orden
+     collectionSorted.sort((a,b) => {
+       return sortArrayFull.indexOf(a.data.title) - sortArrayFull.indexOf(b.data.title);
+     })
+     // Devolvemos el array
+     return collectionSorted
+
+  });
+
   config.addFilter('markdown', function(value) {
     let markdown = require('markdown-it')({
       html: true
