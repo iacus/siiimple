@@ -12,5 +12,5 @@ items:
       text: Quinoa 3 colores, arándanos rojos deshidratados, verdurita fresca, huevo campero, cítricos.
     - title: BAGEL DE POLLO CRUNCHY
       price: 5,50€
-      text: Bagel de la tahona relleno de pollo especiado rebozado en cereales, salsa de mayonesa y mostaza acompañado de patatas deluxe.
+      text: Bagel de la tahona relleno de pollo especiado rebozado en cereales, mezclum de lechugas, tomate, salsa de mayonesa y mostaza acompañado de patatas deluxe.
 ---
