@@ -49,7 +49,7 @@ blocks:
 
       Somos fogar do pan, \
       o fomos onte, \
-      e serémolo sempre..
+      e serémolo sempre.
   - dataColor: color-set-04
     classBlock: text-03 show-sm
     include: true
