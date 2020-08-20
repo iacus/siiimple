@@ -34,7 +34,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
 
    {# {% include "includes/nav.njk" %} #}

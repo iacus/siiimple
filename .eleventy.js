@@ -1,3 +1,5 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = function(config) {
 
   let sortArray = []
@@ -62,6 +64,8 @@ module.exports = function(config) {
   config.addFilter('nospaces', function(value) {
     return value.replace(/\s/g, '');
   });
+
+  config.addPlugin(syntaxHighlight);
 
   return {
     dir: {

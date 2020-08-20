@@ -1,0 +1,3 @@
+[build]
+  command = "run-s clean prod:*"
+  publish = "dist"
