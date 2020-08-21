@@ -7,9 +7,9 @@
           <div class="block-half block-image">
             {# Lazy image #}
             {% if item.imageClass == 'lazyload' %}
-              <img class="block-title img-fit {{item.imageClass|safe}}" data-src="{{item.image|safe}}" alt="">
+              <img class="block-title img-fit {{item.imageClass|safe}}" data-src="{{item.image|safe}}?nf_resize=fit&w=100&h=100" alt="">
             {% else %}
-              <img class="block-title img-fit {{item.imageClass|safe}}" src="{{item.image|safe}}" alt="">
+              <img class="block-title img-fit {{item.imageClass|safe}}" src="{{item.image|safe}}?nf_resize=fit&w=100&h=100" alt="">
             {% endif %}
           </div>
         {% endif %}
