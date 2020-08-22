@@ -21,11 +21,13 @@ shops:
   - title: FNAC <br>CORUÑA
 blocks:
   - title: O FOGAR <br>DO PAN
-    image: images/1.jpg
+    image: 1.jpg
+    imageAlt: Imagen 1
     dataColor: color-set-07
     dataType: display-01
     classText: absolute-sm-down
-  - image: images/2.jpg
+  - image: 2.jpg
+    imageAlt: Imagen 2
     dataColor: color-set-03
     dataType: text-03
     classBlock: alternate
@@ -54,10 +56,11 @@ blocks:
     classBlock: text-03 show-sm
     include: true
   - title: Artesáns <br>dende 1948
+    imageAlt: Imagen 3
     dataColor: color-set-08
     dataType: display-01
     classText: absolute-sm-down
-    image: images/3.jpg
+    image: 3.jpg
     imageClass: lazyload
 layout: layouts/index.njk
 ---

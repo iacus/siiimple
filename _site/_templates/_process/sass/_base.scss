@@ -105,8 +105,6 @@ p {
 
 img {
    width: 100%;
-   object-fit: cover;
-   min-height: 100%;
 }
 
 svg {
@@ -162,9 +160,20 @@ body {
 
 // utils
 
+// Single Image version
 .img-fit{
   object-fit: cover;
   min-height: 100%;
+}
+
+// Picture version
+picture.img-fit{
+  object-fit: cover;
+  min-height: 100%;
+
+  img {
+    height: 100%;
+  }
 }
 
 .center{

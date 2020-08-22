@@ -65,7 +65,8 @@ module.exports = function(config) {
     return value.replace(/\s/g, '');
   });
 
-  config.addPlugin(syntaxHighlight);
+  // A responsive image helper using Netlify Large Media - image transformation
+  config.addShortcode("picture", require("./_site/utils/picture.js"));
 
   return {
     dir: {
